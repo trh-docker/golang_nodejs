@@ -1,6 +1,6 @@
 FROM quay.io/spivegin/golang:v1.16.2
 
-RUN apt-get install -y gnupg2 tar git curl wget apt-transport-https ca-certificates &&\
+RUN apt update && apt-get install -y gnupg2 tar git curl wget apt-transport-https ca-certificates &&\
     apt-get autoclean && apt-get autoremove &&\
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
